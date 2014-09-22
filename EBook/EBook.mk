@@ -61,7 +61,7 @@ CFLAGS   :=  -g -O0 -Wall $(Preprocessors)
 ##
 CodeLiteDir:=C:\Program Files\CodeLite
 UNIT_TEST_PP_SRC_DIR:=C:\UnitTest++-1.3
-Objects0=$(IntermediateDirectory)/main$(ObjectSuffix) $(IntermediateDirectory)/EBook_old-master_Anotacao$(ObjectSuffix) $(IntermediateDirectory)/EBook_old-master_EBook$(ObjectSuffix) $(IntermediateDirectory)/EBook_old-master_Leitor$(ObjectSuffix) $(IntermediateDirectory)/EBook_old-master_Livro$(ObjectSuffix) $(IntermediateDirectory)/menu$(ObjectSuffix) 
+Objects0=$(IntermediateDirectory)/main$(ObjectSuffix) $(IntermediateDirectory)/EBook_old-master_Anotacao$(ObjectSuffix) $(IntermediateDirectory)/EBook_old-master_EBook$(ObjectSuffix) $(IntermediateDirectory)/EBook_old-master_Leitor$(ObjectSuffix) $(IntermediateDirectory)/EBook_old-master_Livro$(ObjectSuffix) 
 
 
 
@@ -128,14 +128,6 @@ $(IntermediateDirectory)/EBook_old-master_Livro$(DependSuffix): ../../../EBook_o
 $(IntermediateDirectory)/EBook_old-master_Livro$(PreprocessSuffix): ../../../EBook_old-master/EBook_old-master/Livro.cpp
 	@$(CXX) $(CXXFLAGS) $(IncludePCH) $(IncludePath) $(PreprocessOnlySwitch) $(OutputSwitch) $(IntermediateDirectory)/EBook_old-master_Livro$(PreprocessSuffix) "../../../EBook_old-master/EBook_old-master/Livro.cpp"
 
-$(IntermediateDirectory)/menu$(ObjectSuffix): menu.cpp $(IntermediateDirectory)/menu$(DependSuffix)
-	$(CXX) $(IncludePCH) $(SourceSwitch) "C:/Users/LAB4-PC01/Desktop/ProgII/EBook/EBook/menu.cpp" $(CXXFLAGS) $(ObjectSwitch)$(IntermediateDirectory)/menu$(ObjectSuffix) $(IncludePath)
-$(IntermediateDirectory)/menu$(DependSuffix): menu.cpp
-	@$(CXX) $(CXXFLAGS) $(IncludePCH) $(IncludePath) -MG -MP -MT$(IntermediateDirectory)/menu$(ObjectSuffix) -MF$(IntermediateDirectory)/menu$(DependSuffix) -MM "menu.cpp"
-
-$(IntermediateDirectory)/menu$(PreprocessSuffix): menu.cpp
-	@$(CXX) $(CXXFLAGS) $(IncludePCH) $(IncludePath) $(PreprocessOnlySwitch) $(OutputSwitch) $(IntermediateDirectory)/menu$(PreprocessSuffix) "menu.cpp"
-
 
 -include $(IntermediateDirectory)/*$(DependSuffix)
 ##
@@ -157,9 +149,6 @@ clean:
 	$(RM) $(IntermediateDirectory)/EBook_old-master_Livro$(ObjectSuffix)
 	$(RM) $(IntermediateDirectory)/EBook_old-master_Livro$(DependSuffix)
 	$(RM) $(IntermediateDirectory)/EBook_old-master_Livro$(PreprocessSuffix)
-	$(RM) $(IntermediateDirectory)/menu$(ObjectSuffix)
-	$(RM) $(IntermediateDirectory)/menu$(DependSuffix)
-	$(RM) $(IntermediateDirectory)/menu$(PreprocessSuffix)
 	$(RM) $(OutputFile)
 	$(RM) $(OutputFile).exe
 	$(RM) "../../.build-debug/EBook"

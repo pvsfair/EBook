@@ -1,3 +1,5 @@
+//construtor default & const por referencia
+
 #include <iostream>
 #include <list>
 #include <string>

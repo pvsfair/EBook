@@ -99,7 +99,5 @@
     <File Name="../../../EBook_old-master/EBook_old-master/Leitor.h"/>
     <File Name="../../../EBook_old-master/EBook_old-master/Livro.cpp"/>
     <File Name="../../../EBook_old-master/EBook_old-master/Livro.h" ExcludeProjConfig="Debug"/>
-    <File Name="menu.h"/>
-    <File Name="menu.cpp"/>
   </VirtualDirectory>
 </CodeLite_Project>
