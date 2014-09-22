@@ -1,0 +1,1 @@
+./Debug/main.o ./Debug/EBook_old-master_Anotacao.o ./Debug/EBook_old-master_EBook.o ./Debug/EBook_old-master_Leitor.o ./Debug/EBook_old-master_Livro.o   
