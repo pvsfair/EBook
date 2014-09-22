@@ -91,5 +91,15 @@
   </Settings>
   <VirtualDirectory Name="src">
     <File Name="main.cpp"/>
+    <File Name="../../../EBook_old-master/EBook_old-master/Anotacao.cpp"/>
+    <File Name="../../../EBook_old-master/EBook_old-master/Anotacao.h"/>
+    <File Name="../../../EBook_old-master/EBook_old-master/EBook.cpp"/>
+    <File Name="../../../EBook_old-master/EBook_old-master/EBook.h"/>
+    <File Name="../../../EBook_old-master/EBook_old-master/Leitor.cpp"/>
+    <File Name="../../../EBook_old-master/EBook_old-master/Leitor.h"/>
+    <File Name="../../../EBook_old-master/EBook_old-master/Livro.cpp"/>
+    <File Name="../../../EBook_old-master/EBook_old-master/Livro.h" ExcludeProjConfig="Debug"/>
+    <File Name="menu.h"/>
+    <File Name="menu.cpp"/>
   </VirtualDirectory>
 </CodeLite_Project>
