@@ -17,7 +17,6 @@ int main(void){
 	//eBooks.emplace_back(eBook01);
 	eBooks.push_back(EBook(Livro("Livro02", "Editora01", "Autor01", 9781234567890, 25), "Leitor01"));
 	//eBooks.emplace_back(Livro("Livro02", "Editora01", "Autor01", 9781234567890, 25), "Leitor01");
-
 	
 	cout << "Criou anotacao: " << ((eBooks.front().novaAnotacao(151, "Lorem Ipsum")) ? "true" : "false") << "\n";
 	cout << "Criou anotacao: " << ((eBooks.front().novaAnotacao(132, "asbudabsd")) ? "true" : "false") << "\n";
