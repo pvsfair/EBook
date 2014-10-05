@@ -5,16 +5,16 @@
 ## Debug
 ProjectName            :=EBook
 ConfigurationName      :=Debug
-WorkspacePath          := "C:\Users\LAB4-PC01\Desktop\ProgII"
-ProjectPath            := "C:\Users\LAB4-PC01\Desktop\ProgII\EBook\EBook"
+WorkspacePath          := "C:\Program Files (x86)\CodeLite\Grafos"
+ProjectPath            := "C:\Users\Paulo\Documents\GitHub\EBook\EBook"
 IntermediateDirectory  :=./Debug
 OutDir                 := $(IntermediateDirectory)
 CurrentFileName        :=
 CurrentFilePath        :=
 CurrentFileFullPath    :=
-User                   :=LAB4-PC01
-Date                   :=22/09/2014
-CodeLitePath           :="C:\Program Files\CodeLite"
+User                   :=Paulo
+Date                   :=09/30/14
+CodeLitePath           :="C:\Program Files (x86)\CodeLite"
 LinkerName             :=g++
 SharedObjectLinkerName :=g++ -shared -fPIC
 ObjectSuffix           :=.o
@@ -47,21 +47,23 @@ LibPath                := $(LibraryPathSwitch).
 
 ##
 ## Common variables
-## AR, CXX, CC, CXXFLAGS and CFLAGS can be overriden using an environment variables
+## AR, CXX, CC, AS, CXXFLAGS and CFLAGS can be overriden using an environment variables
 ##
 AR       := ar rcus
 CXX      := g++
 CC       := gcc
 CXXFLAGS :=  -g -O0 -Wall $(Preprocessors)
 CFLAGS   :=  -g -O0 -Wall $(Preprocessors)
+ASFLAGS  := 
+AS       := as
 
 
 ##
 ## User defined environment variables
 ##
-CodeLiteDir:=C:\Program Files\CodeLite
+CodeLiteDir:=C:\Program Files (x86)\CodeLite
 UNIT_TEST_PP_SRC_DIR:=C:\UnitTest++-1.3
-Objects0=$(IntermediateDirectory)/main$(ObjectSuffix) $(IntermediateDirectory)/EBook_old-master_Anotacao$(ObjectSuffix) $(IntermediateDirectory)/EBook_old-master_EBook$(ObjectSuffix) $(IntermediateDirectory)/EBook_old-master_Leitor$(ObjectSuffix) $(IntermediateDirectory)/EBook_old-master_Livro$(ObjectSuffix) 
+Objects0=$(IntermediateDirectory)/main.cpp$(ObjectSuffix) $(IntermediateDirectory)/EBook_old-master_Anotacao.cpp$(ObjectSuffix) $(IntermediateDirectory)/EBook_old-master_EBook.cpp$(ObjectSuffix) $(IntermediateDirectory)/EBook_old-master_Leitor.cpp$(ObjectSuffix) $(IntermediateDirectory)/EBook_old-master_Livro.cpp$(ObjectSuffix) 
 
 
 
@@ -88,45 +90,45 @@ PreBuild:
 ##
 ## Objects
 ##
-$(IntermediateDirectory)/main$(ObjectSuffix): main.cpp $(IntermediateDirectory)/main$(DependSuffix)
-	$(CXX) $(IncludePCH) $(SourceSwitch) "C:/Users/LAB4-PC01/Desktop/ProgII/EBook/EBook/main.cpp" $(CXXFLAGS) $(ObjectSwitch)$(IntermediateDirectory)/main$(ObjectSuffix) $(IncludePath)
-$(IntermediateDirectory)/main$(DependSuffix): main.cpp
-	@$(CXX) $(CXXFLAGS) $(IncludePCH) $(IncludePath) -MG -MP -MT$(IntermediateDirectory)/main$(ObjectSuffix) -MF$(IntermediateDirectory)/main$(DependSuffix) -MM "main.cpp"
+$(IntermediateDirectory)/main.cpp$(ObjectSuffix): main.cpp $(IntermediateDirectory)/main.cpp$(DependSuffix)
+	$(CXX) $(IncludePCH) $(SourceSwitch) "C:/Users/Paulo/Documents/GitHub/EBook/EBook/main.cpp" $(CXXFLAGS) $(ObjectSwitch)$(IntermediateDirectory)/main.cpp$(ObjectSuffix) $(IncludePath)
+$(IntermediateDirectory)/main.cpp$(DependSuffix): main.cpp
+	@$(CXX) $(CXXFLAGS) $(IncludePCH) $(IncludePath) -MG -MP -MT$(IntermediateDirectory)/main.cpp$(ObjectSuffix) -MF$(IntermediateDirectory)/main.cpp$(DependSuffix) -MM "main.cpp"
 
-$(IntermediateDirectory)/main$(PreprocessSuffix): main.cpp
-	@$(CXX) $(CXXFLAGS) $(IncludePCH) $(IncludePath) $(PreprocessOnlySwitch) $(OutputSwitch) $(IntermediateDirectory)/main$(PreprocessSuffix) "main.cpp"
+$(IntermediateDirectory)/main.cpp$(PreprocessSuffix): main.cpp
+	@$(CXX) $(CXXFLAGS) $(IncludePCH) $(IncludePath) $(PreprocessOnlySwitch) $(OutputSwitch) $(IntermediateDirectory)/main.cpp$(PreprocessSuffix) "main.cpp"
 
-$(IntermediateDirectory)/EBook_old-master_Anotacao$(ObjectSuffix): ../../../EBook_old-master/EBook_old-master/Anotacao.cpp $(IntermediateDirectory)/EBook_old-master_Anotacao$(DependSuffix)
-	$(CXX) $(IncludePCH) $(SourceSwitch) "C:/Users/LAB4-PC01/Desktop/EBook_old-master/EBook_old-master/Anotacao.cpp" $(CXXFLAGS) $(ObjectSwitch)$(IntermediateDirectory)/EBook_old-master_Anotacao$(ObjectSuffix) $(IncludePath)
-$(IntermediateDirectory)/EBook_old-master_Anotacao$(DependSuffix): ../../../EBook_old-master/EBook_old-master/Anotacao.cpp
-	@$(CXX) $(CXXFLAGS) $(IncludePCH) $(IncludePath) -MG -MP -MT$(IntermediateDirectory)/EBook_old-master_Anotacao$(ObjectSuffix) -MF$(IntermediateDirectory)/EBook_old-master_Anotacao$(DependSuffix) -MM "../../../EBook_old-master/EBook_old-master/Anotacao.cpp"
+$(IntermediateDirectory)/EBook_old-master_Anotacao.cpp$(ObjectSuffix): ../../../EBook_old-master/EBook_old-master/Anotacao.cpp $(IntermediateDirectory)/EBook_old-master_Anotacao.cpp$(DependSuffix)
+	$(CXX) $(IncludePCH) $(SourceSwitch) "C:/Users/Paulo/Documents/EBook_old-master/EBook_old-master/Anotacao.cpp" $(CXXFLAGS) $(ObjectSwitch)$(IntermediateDirectory)/EBook_old-master_Anotacao.cpp$(ObjectSuffix) $(IncludePath)
+$(IntermediateDirectory)/EBook_old-master_Anotacao.cpp$(DependSuffix): ../../../EBook_old-master/EBook_old-master/Anotacao.cpp
+	@$(CXX) $(CXXFLAGS) $(IncludePCH) $(IncludePath) -MG -MP -MT$(IntermediateDirectory)/EBook_old-master_Anotacao.cpp$(ObjectSuffix) -MF$(IntermediateDirectory)/EBook_old-master_Anotacao.cpp$(DependSuffix) -MM "../../../EBook_old-master/EBook_old-master/Anotacao.cpp"
 
-$(IntermediateDirectory)/EBook_old-master_Anotacao$(PreprocessSuffix): ../../../EBook_old-master/EBook_old-master/Anotacao.cpp
-	@$(CXX) $(CXXFLAGS) $(IncludePCH) $(IncludePath) $(PreprocessOnlySwitch) $(OutputSwitch) $(IntermediateDirectory)/EBook_old-master_Anotacao$(PreprocessSuffix) "../../../EBook_old-master/EBook_old-master/Anotacao.cpp"
+$(IntermediateDirectory)/EBook_old-master_Anotacao.cpp$(PreprocessSuffix): ../../../EBook_old-master/EBook_old-master/Anotacao.cpp
+	@$(CXX) $(CXXFLAGS) $(IncludePCH) $(IncludePath) $(PreprocessOnlySwitch) $(OutputSwitch) $(IntermediateDirectory)/EBook_old-master_Anotacao.cpp$(PreprocessSuffix) "../../../EBook_old-master/EBook_old-master/Anotacao.cpp"
 
-$(IntermediateDirectory)/EBook_old-master_EBook$(ObjectSuffix): ../../../EBook_old-master/EBook_old-master/EBook.cpp $(IntermediateDirectory)/EBook_old-master_EBook$(DependSuffix)
-	$(CXX) $(IncludePCH) $(SourceSwitch) "C:/Users/LAB4-PC01/Desktop/EBook_old-master/EBook_old-master/EBook.cpp" $(CXXFLAGS) $(ObjectSwitch)$(IntermediateDirectory)/EBook_old-master_EBook$(ObjectSuffix) $(IncludePath)
-$(IntermediateDirectory)/EBook_old-master_EBook$(DependSuffix): ../../../EBook_old-master/EBook_old-master/EBook.cpp
-	@$(CXX) $(CXXFLAGS) $(IncludePCH) $(IncludePath) -MG -MP -MT$(IntermediateDirectory)/EBook_old-master_EBook$(ObjectSuffix) -MF$(IntermediateDirectory)/EBook_old-master_EBook$(DependSuffix) -MM "../../../EBook_old-master/EBook_old-master/EBook.cpp"
+$(IntermediateDirectory)/EBook_old-master_EBook.cpp$(ObjectSuffix): ../../../EBook_old-master/EBook_old-master/EBook.cpp $(IntermediateDirectory)/EBook_old-master_EBook.cpp$(DependSuffix)
+	$(CXX) $(IncludePCH) $(SourceSwitch) "C:/Users/Paulo/Documents/EBook_old-master/EBook_old-master/EBook.cpp" $(CXXFLAGS) $(ObjectSwitch)$(IntermediateDirectory)/EBook_old-master_EBook.cpp$(ObjectSuffix) $(IncludePath)
+$(IntermediateDirectory)/EBook_old-master_EBook.cpp$(DependSuffix): ../../../EBook_old-master/EBook_old-master/EBook.cpp
+	@$(CXX) $(CXXFLAGS) $(IncludePCH) $(IncludePath) -MG -MP -MT$(IntermediateDirectory)/EBook_old-master_EBook.cpp$(ObjectSuffix) -MF$(IntermediateDirectory)/EBook_old-master_EBook.cpp$(DependSuffix) -MM "../../../EBook_old-master/EBook_old-master/EBook.cpp"
 
-$(IntermediateDirectory)/EBook_old-master_EBook$(PreprocessSuffix): ../../../EBook_old-master/EBook_old-master/EBook.cpp
-	@$(CXX) $(CXXFLAGS) $(IncludePCH) $(IncludePath) $(PreprocessOnlySwitch) $(OutputSwitch) $(IntermediateDirectory)/EBook_old-master_EBook$(PreprocessSuffix) "../../../EBook_old-master/EBook_old-master/EBook.cpp"
+$(IntermediateDirectory)/EBook_old-master_EBook.cpp$(PreprocessSuffix): ../../../EBook_old-master/EBook_old-master/EBook.cpp
+	@$(CXX) $(CXXFLAGS) $(IncludePCH) $(IncludePath) $(PreprocessOnlySwitch) $(OutputSwitch) $(IntermediateDirectory)/EBook_old-master_EBook.cpp$(PreprocessSuffix) "../../../EBook_old-master/EBook_old-master/EBook.cpp"
 
-$(IntermediateDirectory)/EBook_old-master_Leitor$(ObjectSuffix): ../../../EBook_old-master/EBook_old-master/Leitor.cpp $(IntermediateDirectory)/EBook_old-master_Leitor$(DependSuffix)
-	$(CXX) $(IncludePCH) $(SourceSwitch) "C:/Users/LAB4-PC01/Desktop/EBook_old-master/EBook_old-master/Leitor.cpp" $(CXXFLAGS) $(ObjectSwitch)$(IntermediateDirectory)/EBook_old-master_Leitor$(ObjectSuffix) $(IncludePath)
-$(IntermediateDirectory)/EBook_old-master_Leitor$(DependSuffix): ../../../EBook_old-master/EBook_old-master/Leitor.cpp
-	@$(CXX) $(CXXFLAGS) $(IncludePCH) $(IncludePath) -MG -MP -MT$(IntermediateDirectory)/EBook_old-master_Leitor$(ObjectSuffix) -MF$(IntermediateDirectory)/EBook_old-master_Leitor$(DependSuffix) -MM "../../../EBook_old-master/EBook_old-master/Leitor.cpp"
+$(IntermediateDirectory)/EBook_old-master_Leitor.cpp$(ObjectSuffix): ../../../EBook_old-master/EBook_old-master/Leitor.cpp $(IntermediateDirectory)/EBook_old-master_Leitor.cpp$(DependSuffix)
+	$(CXX) $(IncludePCH) $(SourceSwitch) "C:/Users/Paulo/Documents/EBook_old-master/EBook_old-master/Leitor.cpp" $(CXXFLAGS) $(ObjectSwitch)$(IntermediateDirectory)/EBook_old-master_Leitor.cpp$(ObjectSuffix) $(IncludePath)
+$(IntermediateDirectory)/EBook_old-master_Leitor.cpp$(DependSuffix): ../../../EBook_old-master/EBook_old-master/Leitor.cpp
+	@$(CXX) $(CXXFLAGS) $(IncludePCH) $(IncludePath) -MG -MP -MT$(IntermediateDirectory)/EBook_old-master_Leitor.cpp$(ObjectSuffix) -MF$(IntermediateDirectory)/EBook_old-master_Leitor.cpp$(DependSuffix) -MM "../../../EBook_old-master/EBook_old-master/Leitor.cpp"
 
-$(IntermediateDirectory)/EBook_old-master_Leitor$(PreprocessSuffix): ../../../EBook_old-master/EBook_old-master/Leitor.cpp
-	@$(CXX) $(CXXFLAGS) $(IncludePCH) $(IncludePath) $(PreprocessOnlySwitch) $(OutputSwitch) $(IntermediateDirectory)/EBook_old-master_Leitor$(PreprocessSuffix) "../../../EBook_old-master/EBook_old-master/Leitor.cpp"
+$(IntermediateDirectory)/EBook_old-master_Leitor.cpp$(PreprocessSuffix): ../../../EBook_old-master/EBook_old-master/Leitor.cpp
+	@$(CXX) $(CXXFLAGS) $(IncludePCH) $(IncludePath) $(PreprocessOnlySwitch) $(OutputSwitch) $(IntermediateDirectory)/EBook_old-master_Leitor.cpp$(PreprocessSuffix) "../../../EBook_old-master/EBook_old-master/Leitor.cpp"
 
-$(IntermediateDirectory)/EBook_old-master_Livro$(ObjectSuffix): ../../../EBook_old-master/EBook_old-master/Livro.cpp $(IntermediateDirectory)/EBook_old-master_Livro$(DependSuffix)
-	$(CXX) $(IncludePCH) $(SourceSwitch) "C:/Users/LAB4-PC01/Desktop/EBook_old-master/EBook_old-master/Livro.cpp" $(CXXFLAGS) $(ObjectSwitch)$(IntermediateDirectory)/EBook_old-master_Livro$(ObjectSuffix) $(IncludePath)
-$(IntermediateDirectory)/EBook_old-master_Livro$(DependSuffix): ../../../EBook_old-master/EBook_old-master/Livro.cpp
-	@$(CXX) $(CXXFLAGS) $(IncludePCH) $(IncludePath) -MG -MP -MT$(IntermediateDirectory)/EBook_old-master_Livro$(ObjectSuffix) -MF$(IntermediateDirectory)/EBook_old-master_Livro$(DependSuffix) -MM "../../../EBook_old-master/EBook_old-master/Livro.cpp"
+$(IntermediateDirectory)/EBook_old-master_Livro.cpp$(ObjectSuffix): ../../../EBook_old-master/EBook_old-master/Livro.cpp $(IntermediateDirectory)/EBook_old-master_Livro.cpp$(DependSuffix)
+	$(CXX) $(IncludePCH) $(SourceSwitch) "C:/Users/Paulo/Documents/EBook_old-master/EBook_old-master/Livro.cpp" $(CXXFLAGS) $(ObjectSwitch)$(IntermediateDirectory)/EBook_old-master_Livro.cpp$(ObjectSuffix) $(IncludePath)
+$(IntermediateDirectory)/EBook_old-master_Livro.cpp$(DependSuffix): ../../../EBook_old-master/EBook_old-master/Livro.cpp
+	@$(CXX) $(CXXFLAGS) $(IncludePCH) $(IncludePath) -MG -MP -MT$(IntermediateDirectory)/EBook_old-master_Livro.cpp$(ObjectSuffix) -MF$(IntermediateDirectory)/EBook_old-master_Livro.cpp$(DependSuffix) -MM "../../../EBook_old-master/EBook_old-master/Livro.cpp"
 
-$(IntermediateDirectory)/EBook_old-master_Livro$(PreprocessSuffix): ../../../EBook_old-master/EBook_old-master/Livro.cpp
-	@$(CXX) $(CXXFLAGS) $(IncludePCH) $(IncludePath) $(PreprocessOnlySwitch) $(OutputSwitch) $(IntermediateDirectory)/EBook_old-master_Livro$(PreprocessSuffix) "../../../EBook_old-master/EBook_old-master/Livro.cpp"
+$(IntermediateDirectory)/EBook_old-master_Livro.cpp$(PreprocessSuffix): ../../../EBook_old-master/EBook_old-master/Livro.cpp
+	@$(CXX) $(CXXFLAGS) $(IncludePCH) $(IncludePath) $(PreprocessOnlySwitch) $(OutputSwitch) $(IntermediateDirectory)/EBook_old-master_Livro.cpp$(PreprocessSuffix) "../../../EBook_old-master/EBook_old-master/Livro.cpp"
 
 
 -include $(IntermediateDirectory)/*$(DependSuffix)
@@ -134,23 +136,10 @@ $(IntermediateDirectory)/EBook_old-master_Livro$(PreprocessSuffix): ../../../EBo
 ## Clean
 ##
 clean:
-	$(RM) $(IntermediateDirectory)/main$(ObjectSuffix)
-	$(RM) $(IntermediateDirectory)/main$(DependSuffix)
-	$(RM) $(IntermediateDirectory)/main$(PreprocessSuffix)
-	$(RM) $(IntermediateDirectory)/EBook_old-master_Anotacao$(ObjectSuffix)
-	$(RM) $(IntermediateDirectory)/EBook_old-master_Anotacao$(DependSuffix)
-	$(RM) $(IntermediateDirectory)/EBook_old-master_Anotacao$(PreprocessSuffix)
-	$(RM) $(IntermediateDirectory)/EBook_old-master_EBook$(ObjectSuffix)
-	$(RM) $(IntermediateDirectory)/EBook_old-master_EBook$(DependSuffix)
-	$(RM) $(IntermediateDirectory)/EBook_old-master_EBook$(PreprocessSuffix)
-	$(RM) $(IntermediateDirectory)/EBook_old-master_Leitor$(ObjectSuffix)
-	$(RM) $(IntermediateDirectory)/EBook_old-master_Leitor$(DependSuffix)
-	$(RM) $(IntermediateDirectory)/EBook_old-master_Leitor$(PreprocessSuffix)
-	$(RM) $(IntermediateDirectory)/EBook_old-master_Livro$(ObjectSuffix)
-	$(RM) $(IntermediateDirectory)/EBook_old-master_Livro$(DependSuffix)
-	$(RM) $(IntermediateDirectory)/EBook_old-master_Livro$(PreprocessSuffix)
+	$(RM) ./Debug/*$(ObjectSuffix)
+	$(RM) ./Debug/*$(DependSuffix)
 	$(RM) $(OutputFile)
 	$(RM) $(OutputFile).exe
-	$(RM) "../../.build-debug/EBook"
+	$(RM) "../../../../../../Program Files (x86)/CodeLite/Grafos/.build-debug/EBook"
 
 
